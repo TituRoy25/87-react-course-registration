@@ -4,7 +4,7 @@
       "cover": "https://i.ibb.co/Wxv0V3F/Rectangle-2-2.png",
       "title": "Introduction to C Programming",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$15000",
+      "price": "15000",
       "credit": 1
     },
     {
@@ -12,7 +12,7 @@
       "cover": "https://i.ibb.co/mhygdJG/Rectangle-2-3.png",
       "title": "Introduction to Algorithms",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$25000",
+      "price": "25000",
       "credit": 2
     },
     {
@@ -20,7 +20,7 @@
       "cover": "https://i.ibb.co/h7T3WGT/Rectangle-2-4.png",
       "title": "Introduction to C++ for DSA",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$10000",
+      "price": "10000",
       "credit": 10
     },
     {
@@ -28,7 +28,7 @@
       "cover": "https://i.ibb.co/FK6LB6K/Rectangle-3.png",
       "title": "Basic Data Structures",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$35000",
+      "price": "35000",
       "credit": 5
     },
     {
@@ -36,7 +36,7 @@
       "cover": "https://i.ibb.co/KxvvxK7/Rectangle-2.png",
       "title": "Introduction to OOP Python",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$19000",
+      "price": "19000",
       "credit": 5
     },
     {
@@ -44,7 +44,7 @@
       "cover": "https://i.ibb.co/MDRpzC1/Rectangle-2-5.png",
       "title": "Software Engineering",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$23000",
+      "price": "23000",
       "credit": 2
     },
     {
@@ -52,7 +52,7 @@
       "cover": "https://i.ibb.co/7r9txtn/Rectangle-3-1.png",
       "title": "AWS, Cloud Computing",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$35000",
+      "price": "35000",
       "credit": 5
     },
     {
@@ -60,7 +60,7 @@
       "cover": "https://i.ibb.co/zbFJ4FY/Rectangle-2-1.png",
       "title": "Database (MySQL)",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$19000",
+      "price": "19000",
       "credit": 5
     },
     {
@@ -68,7 +68,7 @@
       "cover": "https://i.ibb.co/Ws0rbm1/Rectangle-2-6.png",
       "title": "Problem-Solving Part",
       "title-details": "It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.",
-      "price": "$23000",
+      "price": "23000",
       "credit": 2
     }
   ]
