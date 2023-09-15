@@ -2,8 +2,9 @@
 .card{
     width: 260px;
     height: 320px;
-    border: 1px solid gray;
+    /* border: 1px solid gray; */
     background-color: rgb(226, 218, 218);
+    border-radius: 5px;
 }
 
 .info{

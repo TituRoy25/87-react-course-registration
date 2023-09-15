@@ -5,7 +5,7 @@ import './Cart.css'
 const Cart = () => {
     return (
         <div>
-            <h1>this is cart</h1>
+            <h1>Course Name</h1>
         </div>
     );
 };
