@@ -6,8 +6,10 @@ import "./Home.css";
 import { FaBookOpen } from 'react-icons/fa';
 
 const Home = () => {
-    const [allCourses, setAllCourses]=useState([]);
-    const [selectedCourses, setSelectedCourses]=useState([])
+    const [allCourses, setAllCourses] = useState([]);
+    const [selectedCourses, setSelectedCourses] = useState([]);
+    const [remaining, setRemaining] = useState(0);
+    const [totalCost, setTotalCost] = useState(0);
 
     useEffect(() => {
         fetch("./data.json")
@@ -17,12 +19,20 @@ const Home = () => {
 
     const handleSelectCourse = (course) => {
         const isExist = selectedCourses.find((item) => item.id == course.id);
+        let count = course.credit;
+
         if (isExist) {
             return alert("Already Registration");
         } else{
+            selectedCourses.forEach((item) => {
+                count = count + item.credit;
+            })
+            const totalRemaining = 20-count;
+            setTotalCost(count);
+            setRemaining(totalRemaining);
+
             setSelectedCourses([...selectedCourses, course]);
-        }
-        
+        }      
     }
     
 //console.log(selectedCourses);
@@ -51,7 +61,7 @@ const Home = () => {
                     }
                 </div>
                 <div className="cart">
-                    <Cart selectedCourses={selectedCourses}></Cart>
+                    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCost={totalCost}></Cart>
                 </div>
             </div>           
         </div>

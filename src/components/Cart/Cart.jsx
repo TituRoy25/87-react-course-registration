@@ -5,15 +5,21 @@
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({selectedCourses}) => {
+const Cart = ({selectedCourses, remaining, totalCost}) => {
      console.log(selectedCourses);
-    let count=1;
+    let count = 1;
     return (
         <div>
-            <h1 className='mb-2'>Course Name</h1>
+            <h5 className='mb-5 font-bold text-[#2F80ED]'>Credit Hour Remaining {remaining} hr</h5>
+            <hr />
+            <h1 className='my-5 font-bold'>Course Name</h1>
             {
-                selectedCourses.map((course) => (<ol key={course.id}>{count++} {course.title}</ol>))
+                selectedCourses.map((course) => (
+                <ol key={course.id}>{count++} {course.title}</ol>
+                ))
             }
+            <hr />
+            <h5 className='mt-5'>Total Credit Hour : {totalCost}</h5>
         </div>
     );
 };
