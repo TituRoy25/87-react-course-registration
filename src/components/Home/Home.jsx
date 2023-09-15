@@ -16,10 +16,16 @@ const Home = () => {
     },[]);
 
     const handleSelectCourse = (course) => {
-        setSelectedCourses([...selectedCourses, course]);
+        const isExist = selectedCourses.find((item) => item.id == course.id);
+        if (isExist) {
+            return alert("Already Registration");
+        } else{
+            setSelectedCourses([...selectedCourses, course]);
+        }
+        
     }
     
-console.log(selectedCourses);
+//console.log(selectedCourses);
     return (
         <div className='container mt-8'>
             <div className="home-container px-10 gap-5 flex justify-center">
@@ -45,7 +51,7 @@ console.log(selectedCourses);
                     }
                 </div>
                 <div className="cart">
-                    <Cart></Cart>
+                    <Cart selectedCourses={selectedCourses}></Cart>
                 </div>
             </div>           
         </div>
