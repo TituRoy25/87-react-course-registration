@@ -5,7 +5,7 @@
 import React from 'react';
 import './Cart.css'
 
-const Cart = ({selectedCourses, remaining, totalCost}) => {
+const Cart = ({selectedCourses, remaining, totalCredit}) => {
      console.log(selectedCourses);
     let count = 1;
     return (
@@ -19,7 +19,7 @@ const Cart = ({selectedCourses, remaining, totalCost}) => {
                 ))
             }
             <hr />
-            <h5 className='mt-5'>Total Credit Hour : {totalCost}</h5>
+            <h5 className='mt-5'>Total Credit Hour : {totalCredit}</h5>
         </div>
     );
 };

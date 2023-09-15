@@ -9,7 +9,7 @@ const Home = () => {
     const [allCourses, setAllCourses] = useState([]);
     const [selectedCourses, setSelectedCourses] = useState([]);
     const [remaining, setRemaining] = useState(0);
-    const [totalCost, setTotalCost] = useState(0);
+    const [totalCredit, setTotalCredit] = useState(0);
 
     useEffect(() => {
         fetch("./data.json")
@@ -27,11 +27,15 @@ const Home = () => {
             selectedCourses.forEach((item) => {
                 count = count + item.credit;
             })
-            const totalRemaining = 20-count;
-            setTotalCost(count);
-            setRemaining(totalRemaining);
-
-            setSelectedCourses([...selectedCourses, course]);
+            const totalRemaining = 20 - count;
+            
+            if (count > 20){
+                return alert("Credit Hour Finished");
+            } else{
+                setTotalCredit(count);
+                setRemaining(totalRemaining);
+                setSelectedCourses([...selectedCourses, course]);
+            }            
         }      
     }
     
@@ -55,13 +59,13 @@ const Home = () => {
                                     <p>Credit : {course.credit}hr</p>
                                 </div>
                             </div>
-                            <button onClick={()=>handleSelectCourse(course)} className='bg-[#2F80ED] w-[240px] h-8 text-white font-bold mt-2'>Select</button>
+                            <button onClick={()=>handleSelectCourse(course)} className='bg-[#2F80ED] w-[240px] h-8 text-white font-bold mt-2 rounded'>Select</button>
                         </div>
                         ))
                     }
                 </div>
                 <div className="cart">
-                    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCost={totalCost}></Cart>
+                    <Cart selectedCourses={selectedCourses} remaining={remaining} totalCredit={totalCredit}></Cart>
                 </div>
             </div>           
         </div>
