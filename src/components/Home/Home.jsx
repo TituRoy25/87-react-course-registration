@@ -4,11 +4,12 @@ import React, { useEffect, useState } from 'react';
 import Cart from '../Cart/Cart';
 import "./Home.css";
 import { FaBookOpen } from 'react-icons/fa';
+import swal from 'sweetalert';
 
 const Home = () => {
     const [allCourses, setAllCourses] = useState([]);
     const [selectedCourses, setSelectedCourses] = useState([]);
-    const [remaining, setRemaining] = useState(0);
+    const [remaining, setRemaining] = useState(20);
     const [totalCredit, setTotalCredit] = useState(0);
 
     useEffect(() => {
@@ -22,7 +23,7 @@ const Home = () => {
         let count = course.credit;
 
         if (isExist) {
-            return alert("Already Registration");
+            return swal("Already Registration");
         } else{
             selectedCourses.forEach((item) => {
                 count = count + item.credit;
@@ -30,8 +31,9 @@ const Home = () => {
             const totalRemaining = 20 - count;
             
             if (count > 20){
-                return alert("Credit Hour Finished");
-            } else{
+                return swal("Credit Hour Finished");
+            }
+            else{
                 setTotalCredit(count);
                 setRemaining(totalRemaining);
                 setSelectedCourses([...selectedCourses, course]);
