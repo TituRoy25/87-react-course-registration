@@ -12,6 +12,7 @@ const Home = () => {
     const [remaining, setRemaining] = useState(20);
     const [totalCredit, setTotalCredit] = useState(0);
 
+    
     useEffect(() => {
         fetch("./data.json")
         .then((res) => res.json())
