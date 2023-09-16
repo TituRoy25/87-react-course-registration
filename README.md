@@ -1,7 +1,7 @@
 Features: 
->> Each card can be selected once, when second time selection it will show a sweetalert on the display.
->> Total credit is maximum 20 hours, more than that will show sweetalert on the display.
->> And the remaining credit hour minimum cannot be below zero.
+* Each card can be selected once, when second time selection it will show a sweetalert on the display.
+* Total credit is maximum 20 hours, more than that will show sweetalert on the display.
+* And the remaining credit hour minimum cannot be below zero.
 
 Discuss managed the state:
 I used state in my project. 
