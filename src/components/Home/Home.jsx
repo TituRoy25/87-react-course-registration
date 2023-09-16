@@ -23,7 +23,7 @@ const Home = () => {
         let count = course.credit;
 
         if (isExist) {
-            return swal("Already Registration");
+            return swal("Sorry..! Already Selected");
         } else{
             selectedCourses.forEach((item) => {
                 count = count + item.credit;
@@ -31,7 +31,7 @@ const Home = () => {
             const totalRemaining = 20 - count;
             
             if (count > 20){
-                return swal("Credit Hour Finished");
+                return swal("Sorry..! Credit Hour Finished");
             }
             else{
                 setTotalCredit(count);
